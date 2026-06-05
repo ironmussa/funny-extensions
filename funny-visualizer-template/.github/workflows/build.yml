@@ -1,0 +1,34 @@
+name: build
+
+# Verifies the committed dist/ matches src/. funny installs the pre-built
+# bundle directly from the repo, so a stale dist/ would ship old code to users.
+# This fails the build instead of silently shipping it.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify-dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm install
+
+      - run: npm run check
+
+      - run: npm run build
+
+      - name: Fail if dist/ is out of date
+        run: |
+          if ! git diff --quiet -- dist; then
+            echo "::error::dist/ is stale. Run 'npm run build' and commit the result."
+            git --no-pager diff --stat -- dist
+            exit 1
+          fi

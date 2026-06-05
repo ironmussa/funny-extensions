@@ -1,0 +1,27 @@
+{
+  "name": "funny-visualizer-jupyter",
+  "version": "0.1.0",
+  "description": "Jupyter notebook visualizer for funny — renders .ipynb files as cells with markdown, code, and outputs.",
+  "type": "module",
+  "private": true,
+  "funny": {
+    "client": "dist/index.mjs"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "peerDependencies": {
+    "@funny/host": ">=1",
+    "react": ">=19"
+  },
+  "peerDependenciesMeta": {
+    "@funny/host": { "optional": true },
+    "react": { "optional": true }
+  },
+  "dependencies": {
+    "marked": "^14.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

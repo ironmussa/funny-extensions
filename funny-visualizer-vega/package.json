@@ -1,0 +1,29 @@
+{
+  "name": "funny-visualizer-vega",
+  "version": "0.1.0",
+  "description": "Vega-Lite / Vega visualizer for funny — renders ```vega-lite / ```vega fenced JSON specs as charts (vega-embed).",
+  "type": "module",
+  "private": true,
+  "funny": {
+    "client": "dist/index.mjs"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "peerDependencies": {
+    "@funny/host": ">=1",
+    "react": ">=19"
+  },
+  "peerDependenciesMeta": {
+    "@funny/host": { "optional": true },
+    "react": { "optional": true }
+  },
+  "dependencies": {
+    "vega": "^5.30.0",
+    "vega-embed": "^6.29.0",
+    "vega-lite": "^5.21.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

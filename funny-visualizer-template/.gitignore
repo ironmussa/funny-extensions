@@ -1,0 +1,8 @@
+node_modules
+*.log
+
+# NOTE: dist/ is intentionally NOT ignored.
+# funny installs the pre-built bundle straight from the repo (CI never builds on
+# install — same model as VSCode .vsix / Obsidian release artifacts), so the
+# committed dist/ is what users get. Run `npm run build` and commit dist/ before
+# tagging a release. The CI workflow fails if the committed dist/ is stale.

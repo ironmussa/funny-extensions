@@ -1,0 +1,6 @@
+node_modules
+*.log
+
+# dist/ is committed on purpose — funny installs the pre-built bundle straight
+# from the repo and never runs your build. Run the package's build script and
+# commit dist/ before tagging a release.

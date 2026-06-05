@@ -1,0 +1,27 @@
+{
+  "name": "funny-visualizer-dot",
+  "version": "0.1.0",
+  "description": "GraphViz/DOT visualizer for funny — renders ```dot fences and .dot/.gv files as an SVG diagram (@hpcc-js/wasm-graphviz, wasm embedded).",
+  "type": "module",
+  "private": true,
+  "funny": {
+    "client": "dist/index.mjs"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "peerDependencies": {
+    "@funny/host": ">=1",
+    "react": ">=19"
+  },
+  "peerDependenciesMeta": {
+    "@funny/host": { "optional": true },
+    "react": { "optional": true }
+  },
+  "dependencies": {
+    "@hpcc-js/wasm-graphviz": "^1.8.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "funny-visualizer-template",
+  "version": "0.1.0",
+  "description": "Starter template for a funny visualizer extension.",
+  "type": "module",
+  "license": "MIT",
+  "funny": {
+    "client": "dist/index.mjs"
+  },
+  "scripts": {
+    "build": "esbuild src/index.tsx --bundle --format=esm --jsx=automatic --external:react --external:react/jsx-runtime --external:@funny/host --outfile=dist/index.mjs",
+    "check": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@funny/host": ">=1",
+    "react": ">=19"
+  },
+  "peerDependenciesMeta": {
+    "@funny/host": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "esbuild": "^0.25.0",
+    "react": "^19.0.0",
+    "typescript": "^5.6.0"
+  }
+}
