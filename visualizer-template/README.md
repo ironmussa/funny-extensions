@@ -1,4 +1,4 @@
-# funny-visualizer-template
+# visualizer-template
 
 A starter template for a **funny visualizer extension** — a plugin that turns a
 fenced code block (` ```demo `) or a file preview (`.demo`) into a rich React
@@ -21,8 +21,8 @@ package.json                 funny.client → dist/index.mjs, build/check script
 
 ```bash
 # 1. Copy this directory out into a new repo
-cp -r examples/funny-visualizer-template ../my-funny-viz
-cd ../my-funny-viz && git init
+cp -r visualizer-template ../my-funny-viz
+cd ../my-funny-viz && rm -rf .git && git init
 
 # 2. Install dev deps and build
 npm install

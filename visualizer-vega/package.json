@@ -1,7 +1,7 @@
 {
-  "name": "funny-visualizer-dot",
+  "name": "visualizer-vega",
   "version": "0.1.0",
-  "description": "GraphViz/DOT visualizer for funny — renders ```dot fences and .dot/.gv files as an SVG diagram (@hpcc-js/wasm-graphviz, wasm embedded).",
+  "description": "Vega-Lite / Vega visualizer for funny — renders ```vega-lite / ```vega fenced JSON specs as charts (vega-embed).",
   "type": "module",
   "private": true,
   "funny": {
@@ -19,7 +19,9 @@
     "react": { "optional": true }
   },
   "dependencies": {
-    "@hpcc-js/wasm-graphviz": "^1.8.0"
+    "vega": "^5.30.0",
+    "vega-embed": "^6.29.0",
+    "vega-lite": "^5.21.0"
   },
   "devDependencies": {
     "esbuild": "^0.25.0"

@@ -1,5 +1,5 @@
 {
-  "name": "funny-visualizer-jupyter",
+  "name": "visualizer-jupyter",
   "version": "0.1.0",
   "description": "Jupyter notebook visualizer for funny — renders .ipynb files as cells with markdown, code, and outputs.",
   "type": "module",

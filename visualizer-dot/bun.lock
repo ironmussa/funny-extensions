@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "funny-visualizer-dot",
+      "name": "visualizer-dot",
       "dependencies": {
         "@hpcc-js/wasm-graphviz": "^1.8.0",
       },

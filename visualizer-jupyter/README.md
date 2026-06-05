@@ -1,4 +1,4 @@
-# funny-visualizer-jupyter
+# visualizer-jupyter
 
 Jupyter notebook visualizer for [funny](https://github.com/argenisleon/funny).
 Opens a `.ipynb` file as rendered cells instead of raw JSON.
@@ -23,7 +23,7 @@ external (host-provided).
 npm install
 npm run build                      # → dist/index.mjs (~70 kB)
 funny ext install .                # local, or:
-funny ext install github:you/funny-visualizer-jupyter
+funny ext install github:ironmussa/funny-extensions --subdir visualizer-jupyter
 ```
 
 Then open any `.ipynb` file in funny.

@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "funny-visualizer-vega",
+      "name": "visualizer-vega",
       "dependencies": {
         "vega": "^5.30.0",
         "vega-embed": "^6.29.0",

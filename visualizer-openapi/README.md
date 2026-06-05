@@ -1,4 +1,4 @@
-# funny-visualizer-openapi
+# visualizer-openapi
 
 OpenAPI / Swagger visualizer for [funny](https://github.com/argenisleon/funny).
 Renders ` ```openapi ` and ` ```swagger ` fenced specs (JSON **or** YAML) as the
@@ -42,7 +42,7 @@ Put your spec in a ` ```openapi ` block instead.
 npm install
 npm run build                      # → dist/index.mjs (~2.4 MB)
 funny ext install .                # local, or:
-funny ext install github:you/funny-visualizer-openapi
+funny ext install github:ironmussa/funny-extensions --subdir visualizer-openapi
 ```
 
 See the full guide: [docs/visualizer-plugins.md](https://github.com/argenisleon/funny/blob/master/docs/visualizer-plugins.md).

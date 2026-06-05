@@ -1,14 +1,14 @@
 {
-  "name": "funny-visualizer-dbml",
+  "name": "visualizer-dot",
   "version": "0.1.0",
-  "description": "DBML ER-diagram visualizer for funny — renders ```dbml fences and .dbml files as an interactive entity-relationship diagram (React Flow).",
+  "description": "GraphViz/DOT visualizer for funny — renders ```dot fences and .dot/.gv files as an SVG diagram (@hpcc-js/wasm-graphviz, wasm embedded).",
   "type": "module",
   "private": true,
   "funny": {
     "client": "dist/index.mjs"
   },
   "scripts": {
-    "build": "bun ./build.mjs"
+    "build": "node ./build.mjs"
   },
   "peerDependencies": {
     "@funny/host": ">=1",
@@ -19,9 +19,7 @@
     "react": { "optional": true }
   },
   "dependencies": {
-    "@dagrejs/dagre": "^3.0.0",
-    "@dbml/parse": "^8.2.3",
-    "@xyflow/react": "^12.10.2"
+    "@hpcc-js/wasm-graphviz": "^1.8.0"
   },
   "devDependencies": {
     "esbuild": "^0.25.0"

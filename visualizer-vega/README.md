@@ -1,4 +1,4 @@
-# funny-visualizer-vega
+# visualizer-vega
 
 Vega-Lite / Vega visualizer for [funny](https://github.com/argenisleon/funny).
 Renders ` ```vega-lite ` and ` ```vega ` fenced JSON specs as interactive charts.
@@ -40,7 +40,7 @@ to `json`; claiming it would hijack every `.json` file. Put your spec in a
 npm install
 npm run build                      # → dist/index.mjs (~1.8 MB)
 funny ext install .                # local, or:
-funny ext install github:you/funny-visualizer-vega
+funny ext install github:ironmussa/funny-extensions --subdir visualizer-vega
 ```
 
 See the full guide: [docs/visualizer-plugins.md](https://github.com/argenisleon/funny/blob/master/docs/visualizer-plugins.md).

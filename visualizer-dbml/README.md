@@ -1,6 +1,6 @@
-# funny-visualizer-dbml
+# visualizer-dbml
 
-DBML → **interactive ER diagram** visualizer for [funny](../../), rendered with
+DBML → **interactive ER diagram** visualizer for [funny](https://github.com/argenisleon/funny), rendered with
 React Flow (tables, columns, PK/FK badges, relationship edges, zoom + expand).
 Renders:
 
@@ -26,11 +26,11 @@ pre-built `dist/index.mjs` is checked in so you can install without a toolchain.
 ## Install
 
 ```bash
-# CLI
-funny ext install examples/funny-visualizer-dbml
+# CLI — straight from this monorepo subfolder
+funny ext install github:ironmussa/funny-extensions --subdir visualizer-dbml
 
 # or copy manually
-cp -r examples/funny-visualizer-dbml ~/.funny/extensions/funny-visualizer-dbml
+cp -r visualizer-dbml ~/.funny/extensions/visualizer-dbml
 ```
 
 Reload funny, then a ```dbml fenced block or a `.dbml` file preview renders as
@@ -55,4 +55,4 @@ Table orgs {
 
 > Full-trust model: installing a visualizer runs its code inside your
 > authenticated session, like installing an npm package. Only install extensions
-> you trust. See [`docs/visualizer-plugins.md`](../../docs/visualizer-plugins.md).
+> you trust. See [`docs/visualizer-plugins.md`](https://github.com/argenisleon/funny/blob/master/docs/visualizer-plugins.md).

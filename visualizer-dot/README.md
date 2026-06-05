@@ -1,4 +1,4 @@
-# funny-visualizer-dot
+# visualizer-dot
 
 GraphViz/DOT visualizer for [funny](https://github.com/argenisleon/funny). Renders
 ` ```dot ` (and ` ```graphviz `) fenced blocks and `.dot` / `.gv` files as an SVG
@@ -27,7 +27,7 @@ and labels stay legible.
 npm install
 npm run build                      # → dist/index.mjs (~810 kB, wasm inside)
 funny ext install .                # local, or:
-funny ext install github:you/funny-visualizer-dot
+funny ext install github:ironmussa/funny-extensions --subdir visualizer-dot
 ```
 
 See the full guide: [docs/visualizer-plugins.md](https://github.com/argenisleon/funny/blob/master/docs/visualizer-plugins.md).

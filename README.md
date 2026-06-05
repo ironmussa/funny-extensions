@@ -8,24 +8,27 @@ Each folder is a standalone, installable funny extension that renders a specific
 
 | Extension | Handles | Built on |
 |---|---|---|
-| [`funny-visualizer-dbml`](funny-visualizer-dbml) | ` ```dbml `, `.dbml` | `@dbml/parse` + React Flow + dagre — interactive ER diagram |
-| [`funny-visualizer-dot`](funny-visualizer-dot) | ` ```dot `, `.dot`, `.gv` | `@hpcc-js/wasm-graphviz` — GraphViz → SVG (wasm embedded) |
-| [`funny-visualizer-vega`](funny-visualizer-vega) | ` ```vega-lite `, ` ```vega ` | `vega-embed` — declarative charts |
-| [`funny-visualizer-jupyter`](funny-visualizer-jupyter) | `.ipynb` | `marked` — nbformat-v4 renderer (cells + outputs) |
-| [`funny-visualizer-openapi`](funny-visualizer-openapi) | ` ```openapi `, ` ```swagger ` | `swagger-ui-dist` + `js-yaml` — Swagger UI |
+| [`visualizer-dbml`](visualizer-dbml) | ` ```dbml `, `.dbml` | `@dbml/parse` + React Flow + dagre — interactive ER diagram |
+| [`visualizer-dot`](visualizer-dot) | ` ```dot `, `.dot`, `.gv` | `@hpcc-js/wasm-graphviz` — GraphViz → SVG (wasm embedded) |
+| [`visualizer-vega`](visualizer-vega) | ` ```vega-lite `, ` ```vega ` | `vega-embed` — declarative charts |
+| [`visualizer-jupyter`](visualizer-jupyter) | `.ipynb` | `marked` — nbformat-v4 renderer (cells + outputs) |
+| [`visualizer-openapi`](visualizer-openapi) | ` ```openapi `, ` ```swagger ` | `swagger-ui-dist` + `js-yaml` — Swagger UI |
 
 ## Build your own
 
-Start from [`funny-visualizer-template`](funny-visualizer-template) — a bare-bones starter with the `@funny/host` types, a build script, and a CI workflow that fails if the committed `dist/` is stale.
+Start from [`visualizer-template`](visualizer-template) — a bare-bones starter with the `@funny/host` types, a build script, and a CI workflow that fails if the committed `dist/` is stale.
 
 ## Installing an extension
 
 ```bash
-# From a local checkout
-funny ext install ./funny-visualizer-dbml
+# Straight from this repo (a subfolder of the monorepo)
+funny ext install github:ironmussa/funny-extensions --subdir visualizer-dbml
+
+# Or from a local checkout
+funny ext install ./visualizer-dbml
 
 # Or copy into funny's extensions dir
-cp -r funny-visualizer-dbml ~/.funny/extensions/funny-visualizer-dbml
+cp -r visualizer-dbml ~/.funny/extensions/visualizer-dbml
 ```
 
 See the [visualizer plugin guide](https://github.com/argenisleon/funny/blob/master/docs/visualizer-plugins.md) in the funny repo for the full SDK reference (the `@funny/host` contract, the `VisualizerPlugin` interface, building to ESM, and the shared-React import map).
@@ -33,7 +36,7 @@ See the [visualizer plugin guide](https://github.com/argenisleon/funny/blob/mast
 ## Developing
 
 ```bash
-cd funny-visualizer-dbml
+cd visualizer-dbml
 bun install
 bun run build   # rebuilds dist/index.mjs
 ```
